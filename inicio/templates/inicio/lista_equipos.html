@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+  <h1>Lista de equipos</h1>
+   
+  <a href= {% url "crear_equipo" %}>Arma tu equipo</a>
+    <ul>
+       {% for equipo in lista_equipos %}
+        
+        
+        <li>
+            {{equipo}}
+        
+            <a href={% url "detalle_equipos" equipo.id %}>Detalle</a> 
+            <a href={% url "actualizar_equipos" equipo.id %}>Actualizar</a> 
+            <a href={% url "eliminar_equipos" equipo.id %}>Eliminar</a> 
+           
+        </li>
+        
+        {% endfor %}
+    </ul>
+
+{% endblock contenido %}

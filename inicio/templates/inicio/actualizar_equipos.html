@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <h1> Actualizar equipo </h1>
+
+    <form action={% url "actualizar_equipos" equipo.id %} method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {{form}}
+
+        <input type="submit" value="Actualizar">
+    </form> 
+   
+
+{% endblock contenido %}

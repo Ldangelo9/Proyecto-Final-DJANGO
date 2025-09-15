@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <h1>Datos del usuario</h1>
+
+<ul>
+        
+        <li>
+            
+            Email: {{user.email}}
+       
+        </li>   
+
+        <li>
+            
+            Nombre: {{user.first_name}}
+       
+        </li>   
+
+        <li>
+            
+            Apellido: {{user.last_name}}
+       
+        </li>   
+        <li>
+            
+            Imagen: 
+            {% if avatar.imagen %}
+            
+            <img src="{{avatar.imagen.url}}" alt="" height="100px">
+
+            {% endif %}
+        
+        </li>   
+
+
+        
+    </ul>   
+
+    <a href={% url "editar_perfil" %}>Editar</a>
+    <a href={% url "editar_contrasenia" %}>Editar Password</a>
+
+{% endblock contenido %}

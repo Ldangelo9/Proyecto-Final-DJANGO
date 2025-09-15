@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <h1> Arma tu equipo </h1>
+
+    <form action={% url "crear_equipo" %} method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {{formulario}}
+
+        <input type="submit" value="Crear">
+    </form>    
+   
+
+{% endblock contenido %}  
+
+    

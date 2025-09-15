@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    
+    <h1>Detalle del equipo {{equipo.id}} </h1>
+
+    <ul>
+        <li>
+            
+            Procesador: {{equipo.procesador}}
+       
+        </li>   
+        <li>
+            
+            Memoria RAM: {{equipo.ram}}
+       
+        </li>   
+
+        <li>
+            
+            Mother: {{equipo.mother}}
+       
+        </li>   
+
+        <li>
+            
+            Placa de video: {{equipo.video}}
+       
+        </li>   
+        <li>
+            
+            Imagen: 
+            {% if auto.imagen %}
+            
+            <img src="{{equipo.imagen.url}}" alt="Imagen del equipo" height="100px">
+
+            {% endif %}
+        
+        </li>   
+
+
+        
+    </ul>   
+   
+
+{% endblock contenido %}  
+ 
+
+   

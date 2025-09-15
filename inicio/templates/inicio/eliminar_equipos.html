@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <h1> Eliminar equipo </h1>
+
+    <form action={% url "eliminar_equipos" equipo.id %} method="POST">
+        {% csrf_token %}
+        
+        <p>
+            Confirma el borrado del equipo {{equipo}}
+
+        </p>
+        <input type="submit" value="Confirmar borrado">
+    </form>    
+
+
+{% endblock contenido %}
+
