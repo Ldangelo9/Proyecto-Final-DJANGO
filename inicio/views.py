@@ -21,9 +21,10 @@ def crear_equipo(request):
             ram = formulario.cleaned_data.get('ram')
             mother = formulario.cleaned_data.get('mother')
             video = formulario.cleaned_data.get('video')
+            gabinete = formulario.cleaned_data.get('gabinete')
             imagen = formulario.cleaned_data.get('imagen')
            
-            equipo = Equipo(procesador=procesador, ram=ram, mother=mother, video=video, imagen=imagen)
+            equipo = Equipo(procesador=procesador, ram=ram, mother=mother, video=video, gabinete=gabinete, imagen=imagen)
             equipo.save()
             
             return redirect("lista_equipos")
